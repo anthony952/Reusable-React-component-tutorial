@@ -1,0 +1,150 @@
+
+I loved react since the first test I did due to the simplicity and the great benefits that the developers may get by the use of this framework, of course you 
+can make reusable components with others frameworks like Angular aswell but, react hooks help you to make this easier , so, in this article
+ you will learn how to create a component, very simple and useful, with the reusabilty ability, one of the most important features found in the modern web apps nowadays.
+This knowledge may allow you to save development time and make the code less complex. You will have the oportunity to use the component in multiple parts of your app.
+
+Benefits you will have:
+
+- Save development time
+- Make your code simple
+- Make your application scalable
+- Avoid stress during manteniance works.
+
+
+Prerequistes:
+
+- Basic knowledge of JavaScript, HTML and CSS.
+- Basic knowledge of React may help you.
+- NodeJS installed.
+
+
+Goals: 
+
+Create a reusable component using React Hooks. In this tutorial we will create a very popular component that you can find in many social networks, yes, a Card component!
+
+
+
+What is a web component?
+
+
+A component is a set of elements as UI, API, or logic that may have their own behavior, independient of the others elements of the system which allows you to use it 
+several times, and in diferent parts of the software with different information.
+
+
+
+Getting Started
+
+As I told you in the beginning, we will use the React framework to do this, so, we will install this enviroment in our system. Open the terminal and type:
+
+- npm install -g create-react-app
+
+Then wait til the process finishes
+
+- npx create-react-app
+
+Now react is ready to work in your system, to start the dev server only execute
+
+- npm start 
+
+now you can open the react app by writting localhost:3000 in your browser.
+
+browser image
+
+
+
+Setting up the new components
+
+In this tutorial we will be focused in the creation of the component, so, open the directory created by the create-react-app script, and create a new directory with the name
+card in src, and create a file with the name index.js 
+
+
+import React, { } from 'react';
+
+export default function Cards (props){
+
+    return(
+        <h1>Hello World</h1>
+    )
+};
+
+
+Then we must import the new component to the App.js file:
+
+
+CODE:
+
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Card from './card';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Reausable Cards
+        </p>
+      </header>
+      <Card />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+Then we will adit the css file in order to improve the initial stile and get a nice look for our cards, by editing the style of the class .App-header 
+and adding a new element .App-header > img , doing this we will have a smaller header
+
+CODE: 
+
+.App-header {
+  background-color: #282c34;
+  /* min-height: 100vh; */
+  height: 70px;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.App-header > img{
+  height: 50px;
+}
+
+
+This is the result:
+
+imagen1
+
+As you see there is our new component (the Hello World message), now lets create our card!
+
+
+THE CARD COMPONENT FEATURE 
+
+Lets reate a card, for this we will need the JSX code and the CSS styles in order to build it
+
+In the file card/index.js I'll build the basic structure of the card that will be composed of the following data:
+
+- A profile picture.
+- The name of the writter.
+- The publishing date
+- The feature image of the post
+- The title of the post
+- The description of the post
+- The likes of the post.
+
+Our component will receive this information through the props, being the code like this:
+
+CODE:
+

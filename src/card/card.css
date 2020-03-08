@@ -1,0 +1,67 @@
+
+.card-wrapper, .card, .author-info-button, .author-info, .author-picture, .author-name-date {
+    display: flex;
+}
+.card-wrapper{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+    width: 380px;
+}
+.card{
+    background-color: white;
+    border: 1px solid rgba(1,1,1,0.125);
+    width: 380px;
+    flex-direction: column;
+    padding: 10px;
+}
+.author-info-button{
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+}
+.author-info{
+    width: 100%;
+    height: 50px;
+}
+.author-picture{
+    width: 50px;
+    height: 50px;
+}
+.author-picture > img{
+    width: 100%;
+    border-radius: 50px;
+}
+.author-name-date{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left:10px;
+}
+.author-date-min{
+    font-size: 12px
+}
+.post-picture > img {
+    width: 100%;
+}
+.post-picture{
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.post-title {
+    margin-bottom:20px
+}
+.post-title > a{
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom:40px;
+    text-decoration: none;
+    color: #484848;
+}
+.post-description{
+    font-size:0.9em;
+    color:#616161;
+    margin-bottom:10px;
+}
